@@ -42,7 +42,7 @@ public class OrderService {
         return orderRepository.getAllOrders();
     }
 
-    public Integer getCountOfUnassignedOrders() {
+    public int getCountOfUnassignedOrders() {
         return orderRepository.getCountOfUnassignedOrders();
     }
 

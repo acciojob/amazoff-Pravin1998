@@ -67,7 +67,7 @@ public class OrderRepository {
         return orders;
     }
 
-    public Integer getCountOfUnassignedOrders() {
+    public int getCountOfUnassignedOrders() {
         return ordersDB.size()-deliveryPartnersDB.size();
     }
 
