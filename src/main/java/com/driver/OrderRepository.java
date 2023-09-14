@@ -67,14 +67,14 @@ public class OrderRepository {
         return orders;
     }
 
-    public int getCountOfUnassignedOrders() {
-        return ordersDB.size()-deliveryPartnersDB.size();
+    public Integer getCountOfUnassignedOrders() {
+        return ordersDB.size()-orderPartnersDB.size();
     }
 
     public void deletePartnerById(String partnerId) {
         deliveryPartnersDB.remove(partnerId);
 
-        List<String> listOfOrders = new ArrayList<>();
+        List<String> listOfOrders = partnerOrdersDB.get(partnerId);
         partnerOrdersDB.remove(partnerId);
 
         for(String order : listOfOrders){
